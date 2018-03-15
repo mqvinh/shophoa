@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-4.2.xsd
+        ">
+	<http use-expressions="true">
+		<csrf disabled="true" />
+
+		<intercept-url pattern="/" access="permitAll()" />
+
+		<intercept-url pattern="/admincp"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+
+		<intercept-url pattern="/admincp/thanh-toan/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/hoa/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/kieu-hoa/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/loai-hoa/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/hop-thu/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/gioi-thieu/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/lien-he/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/quang-cao/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/slide/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/profile/**"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/getCount"
+			access="hasAnyRole('ROLE_MOD', 'ROLE_ADMIN')" />
+		<intercept-url pattern="/admincp/**" access="hasRole('ROLE_ADMIN')" />
+
+
+		<!-- Table 26.1. Common built-in expressions -->
+		<!-- <http-basic/> -->
+		<!-- <form-login/> -->
+		<access-denied-handler error-page="/admincp/403" />
+
+		<form-login login-page='/dang-nhap-ql'
+			login-processing-url="/j_spring_security_admin" default-target-url="/admincp"
+			authentication-failure-url="/dang-nhap-ql?msg=error"
+			username-parameter="username" password-parameter="password" />
+
+		<logout logout-url="/logout" success-handler-ref="logoutSuccessHandler" />
+
+		<!-- <logout logout-success-url="/admincp" logout-url="/logout" success-handler-ref="logoutSuccessHandler" 
+			delete-cookies="JSESSIONID" invalidate-session="true" /> -->
+
+	</http>
+
+	<authentication-manager>
+		<!-- <authentication-provider> <user-service> <user name="user1" password="12345" 
+			authorities="ROLE_USER" /> <user name="admin1" password="12345" authorities="ROLE_USER, 
+			ROLE_ADMIN" /> </user-service> </authentication-provider> -->
+		<!-- authentication from database -->
+
+		<authentication-provider ref="customAuthenticationProvider" />
+		<!-- <authentication-provider > <password-encoder hash="md5" /> <jdbc-user-service 
+			data-source-ref="myDataSource" users-by-username-query="select username, 
+			password, enabled from user where username=?" authorities-by-username-query="select 
+			username, concat('ROLE_',rl.name) from user us, role rl where us.role=rl.role 
+			and us.username=?" /> </authentication-provider> -->
+
+	</authentication-manager>
+	<global-method-security pre-post-annotations="enabled" />
+</beans:beans>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- <definition name="admincp.ckfinder" template="/WEB-INF/templates/admincp/templatefinder.jsp" >
+		<put-attribute name="content"  value=""/>
+	</definition>
+	<definition name="admincp.ckfinder.index" extends="admincp.ckfinder" >
+		<put-attribute name="content"
+				value="/shophoa/templates/admincp/ckfinder/ckfinder.html" />
+	</definition> -->
+	<!-- đây là giao diện admin -->
+	<definition name="admincp.template" template="/WEB-INF/templates/admincp/template.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/templates/admincp/header.jsp" />
+		<put-attribute name="leftbar"
+			value="/WEB-INF/templates/admincp/leftbar.jsp" />
+		<put-attribute name="topbar"
+			value="/WEB-INF/templates/admincp/topbar.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/templates/admincp/footer.jsp" />
+	</definition>
+
+	<definition name="admincp.index.index" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/index/index.jsp" />
+	</definition>
+	
+	<definition name="admincp.profile.profile" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/profile/profile.jsp" />
+	</definition>
+	
+	<definition name="admincp.login" extends="admincp.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/admincp/login.jsp" />
+	</definition>
+	
+	<definition name="admincp.403" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/403.jsp" />
+	</definition>
+	
+	<!-- sản phẩm -->
+	<definition name="admincp.products.products" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products.jsp" />
+	</definition>
+	<definition name="admincp.products.products_species"
+		extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_species.jsp" />
+	</definition>
+	<definition name="admincp.products.products_type" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_type.jsp" />
+	</definition>
+	<definition name="admincp.products.products_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_add.jsp" />
+	</definition>
+	<definition name="admincp.products.products_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_edit.jsp" />
+	</definition>
+	<definition name="admincp.products.products_species_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_species_add.jsp" />
+	</definition>
+	<definition name="admincp.products.products_species_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_species_edit.jsp" />
+	</definition>
+	<definition name="admincp.products.products_type_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_type_add.jsp" />
+	</definition>
+	<definition name="admincp.products.products_type_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/products/products_type_edit.jsp" />
+	</definition>
+	
+	<!-- người dùng -->
+	<definition name="admincp.user.index" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/index.jsp" />
+	</definition>
+	<definition name="admincp.user.user_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/user_add.jsp" />
+	</definition>
+	<definition name="admincp.user.user_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/user_edit.jsp" />
+	</definition>
+	
+	<definition name="admincp.user.role" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/role.jsp" />
+	</definition>
+	<definition name="admincp.user.role_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/role_add.jsp" />
+	</definition>
+	<definition name="admincp.user.role_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/user/role_edit.jsp" />
+	</definition>
+
+	<!-- other -->
+	<definition name="admincp.other.slide" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/slide.jsp" />
+	</definition>
+	<definition name="admincp.other.slide_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/slide_add.jsp" />
+	</definition>
+	<definition name="admincp.other.slide_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/slide_edit.jsp" />
+	</definition>
+	
+	<definition name="admincp.other.introduce" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/introduce.jsp" />
+	</definition>
+	<definition name="admincp.other.introduce_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/introduce_add.jsp" />
+	</definition>
+	<definition name="admincp.other.introduce_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/introduce_edit.jsp" />
+	</definition>
+
+	<definition name="admincp.other.contact" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/contact.jsp" />
+	</definition>
+	<definition name="admincp.other.contact_detail" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/contact_detail.jsp" />
+	</definition>
+
+	<definition name="admincp.other.advertise" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/advertise.jsp" />
+	</definition>
+	<definition name="admincp.other.advertise_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/advertise_add.jsp" />
+	</definition>
+	<definition name="admincp.other.advertise_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/advertise_edit.jsp" />
+	</definition>
+	
+	<definition name="admincp.other.inbox" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/inbox.jsp" />
+	</definition>
+	<definition name="admincp.other.inbox_detail" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/other/inbox_details.jsp" />
+	</definition>
+	
+	<!-- Shop cart -->
+	<definition name="admincp.shopcart.exhibition" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/shopcart/exhibition.jsp" />
+	</definition>
+	<definition name="admincp.shopcart.exhibition_detail" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/shopcart/exhibition_detail.jsp" />
+	</definition>
+	
+	<definition name="admincp.shopcart.pay" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/shopcart/pay.jsp" />
+	</definition>
+	<definition name="admincp.shopcart.pay_add" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/shopcart/pay_add.jsp" />
+	</definition>
+	<definition name="admincp.shopcart.pay_edit" extends="admincp.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/admincp/shopcart/pay_edit.jsp" />
+	</definition>
+
+	<!-- kết thúc admin -->
+
+	<!-- đây là giao diện public -->
+	<definition name="public.template" template="/WEB-INF/templates/public/template.jsp">
+		<put-attribute name="header"
+			value="/WEB-INF/templates/public/header.jsp" />
+		<put-attribute name="leftbar"
+			value="/WEB-INF/templates/public/leftbar.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/templates/public/footer.jsp" />
+		<put-attribute name="slide"
+			value="/WEB-INF/templates/public/slide.jsp" />
+	</definition>
+
+	<definition name="public.index.index" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/index/index.jsp" />
+	</definition>
+
+	<definition name="public.shophoa.product" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/shophoa/product.jsp" />
+	</definition>
+	
+	<definition name="public.shophoa.product_seach" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/shophoa/product_seach.jsp" />
+	</definition>
+
+	<definition name="public.shophoa.product_detail" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/shophoa/product_detail.jsp" />
+	</definition>
+
+	<definition name="public.giohang.shopcart" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/giohang/shop_cart.jsp" />
+	</definition>
+	
+	<definition name="public.giohang.shopcart_infor" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/giohang/shopcart_infor.jsp" />
+	</definition>
+	
+	<definition name="public.giohang.shopcart_access" extends="public.template">
+		<put-attribute name="content"
+			value="/WEB-INF/jsp/public/giohang/shopcart_access.jsp" />
+	</definition>
+
+	<definition name="public.aboutus" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/about_us.jsp" />
+	</definition>
+	<definition name="public.aboutus_detail" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/about_us_detail.jsp" />
+	</definition>
+
+	<definition name="public.login" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/login.jsp" />
+	</definition>
+
+	<definition name="public.forgetpass" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/forgetpass.jsp" />
+	</definition>
+
+	<definition name="public.contact" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/contact.jsp" />
+	</definition>
+
+	<definition name="public.register" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/register.jsp" />
+	</definition>
+	
+	<definition name="public.profile_pl" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/profile_pl.jsp" />
+	</definition>
+	
+	<definition name="public.exhibition" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/giohang/exhibition.jsp" />
+	</definition>
+	
+	<definition name="public.exhibition_detail" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/giohang/exhibition_detail.jsp" />
+	</definition>
+	
+	<definition name="public.user_info" extends="public.template">
+		<put-attribute name="content" value="/WEB-INF/jsp/public/user_info.jsp" />
+	</definition>
+	<!-- kết thúc public -->
+
+
+</tiles-definitions>
